@@ -1,0 +1,15 @@
+{
+    "name": "@package/types",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "test": "dtslint types"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "@definitelytyped/dtslint": "^0.0.165",
+        "eslint-plugin-jsdoc": "^46.5.0"
+    }
+}

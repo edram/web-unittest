@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test:types": "pnpm -C packages/types run test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
