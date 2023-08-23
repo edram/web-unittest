@@ -22,5 +22,17 @@ type TypeArr1 = typeof arr1; // $ExpectType string[]
 type TypeArr2 = typeof arr2; // $ExpectType string[]
 type TypeArr3 = typeof arr3; // $ExpectType readonly ["hello", "world"]
 // @ts-expect-error
+arr3.push("again");
+// @ts-expect-error
 const arr4: readonly ["hello", "world"] = [];
 const arr5: readonly ["hello", "world"] = ["hello", "world"];
+
+const obj1 = { hello: "hello", world: "world" };
+let obj2 = { hello: "hello", world: "world" };
+const obj3 = { hello: "hello", world: "world" } as const;
+type TypeObj1 = typeof obj1; // $ExpectType { hello: string; world: string; }
+type TypeObj2 = typeof obj2; // $ExpectType { hello: string; world: string; }
+
+obj1.hello = "hello1";
+// @ts-expect-error 不能修改
+obj3.hello = "hello3";
